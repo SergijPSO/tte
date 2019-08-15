@@ -1,0 +1,441 @@
+@import 'variables';
+@import 'mixins';
+
+.app-wrapper {
+  min-width: 353px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.app-sidebar {
+  width: $sidebar-width;
+  margin-right: 14px;
+
+  &-nav__item {
+    position: relative;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    color: $drk_gray;
+    background-color: #fff;
+    border-bottom:1px solid #dde2e4;
+
+    &-icon {
+      margin-right: 22px;
+    }
+
+    &:hover {
+      background-color: $active_blue;
+      color: #fff;
+      transition: color 0.4s ease;
+      transition:background-color 0.4s ease;
+
+      .app-sublist {
+        display: block;
+      }
+
+    }
+  }
+}
+
+.app-sublist {
+  display: none;  
+  position: absolute;
+  left: $sidebar-width;
+  width: 240px;
+  z-index: 1;
+  top: -125px;
+  font-size: 15px;
+
+  &__item {
+    padding: 14px;
+    background-color: #152840;
+    margin-bottom: 1px;
+
+    &-link {
+      display: block;
+      padding: 5px;
+      color: #fff; 
+        &--accent {
+        color: $active_blue;
+        @include flex_to_center;
+        padding: 4px 6px 14px 6px;
+      }
+
+      &:hover {
+        color: $active_blue;
+        transition: color 0.4s ease;
+      }
+    }
+  }
+
+  &__item:hover{
+    background-color: #263a54;
+  }
+
+}
+
+.app-contacts {
+  padding: 19px 20px;
+  background-color: $icon_gray;
+  font-size:14px;
+  color:#fff;
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+
+  & img {
+    margin-right: 20px;
+  }
+
+  &__phone-number {
+    display: block;
+    color: #fff;
+  }
+
+  &__email {
+    color: #fff;
+
+  }
+}
+
+.app-social {
+  display: flex;
+}
+
+.app-social-panel {
+  width: 216px;
+  padding: 16px 0;
+  margin-right: 14px;
+  background-color: #fff;
+
+  &__item {
+    display:flex;
+    align-items:center;
+    padding: 12px 26px;
+    cursor: pointer;
+
+    &-logo {
+      width: 32px;
+      height: 32px;
+      max-height: 100%;
+      padding: 8px;
+      margin-right: 20px;
+      border-radius:50%;
+      background-color: $icon_gray;
+      text-align: center;
+    }
+
+    img {
+      max-height: 100%;
+    }
+
+    a {
+      color: $drk_gray;
+    }
+
+  }
+}
+
+.facebook:hover .app-social-panel__item-logo {
+  background-color: $fb_color;
+  transition: background-color 0.4s ease;
+}
+ 
+.facebook:hover a {
+  color: $fb_color;
+  transition: color 0.4s ease;
+}
+
+.twitter:hover .app-social-panel__item-logo {
+  background-color: $twit_color;
+  transition: background-color 0.4s ease;
+}
+
+.twitter:hover a {
+  color: $twit_color;
+  transition: color 0.4s ease;
+}
+
+.google:hover .app-social-panel__item-logo {
+  background-color: $ggl_color;
+  transition: background-color 0.4s ease;
+}
+
+.google:hover a {
+  color: $ggl_color;
+  transition: color 0.4s ease;
+}
+
+.rss:hover .app-social-panel__item-logo {
+  background-color: $rss_color;
+  transition: background-color 0.4s ease;
+}
+
+.rss:hover a {
+  color: $rss_color;
+  transition: color 0.4s ease;
+} 
+
+.pinterest:hover .app-social-panel__item-logo {
+  background-color: $pntr_color;
+  transition: background-color 0.4s ease;
+}
+
+.pinterest:hover a {
+  color: $pntr_color;
+  transition: color 0.4s ease;
+}
+
+.app-follow-panel {
+  width: 216px;
+  height: 150px;
+  @include flex_between;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 16px 16px 28px;
+  color:#fff;
+  cursor: pointer;
+
+  & + & {
+    margin-top: 14px;
+  }
+
+  &__content {
+    @include flex_to_center;
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left:12px;
+      line-height: normal;
+    }
+  }
+
+  &--twitter {
+    background-color: #4fc6f8;
+  }
+
+  &--facebook {
+    background-color:#4d6baa;
+  }
+}
+
+.app-action-panel {
+  padding: 24px;
+  margin: 14px 0;
+  background-color: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    color: $drk_gray;
+    margin-bottom: 8px;
+  }
+
+  &__txt {
+    font-weight: 100;
+    color:#000;
+    margin-bottom: 14px;
+
+    &--newsletter {
+      font-family: 'myrad_pro';
+      font-size:14px;
+    }
+  }
+
+  &__social {
+    display: inline-flex;
+ 
+    img {
+      max-height:100%;
+    }
+
+    &-icon {
+      width: 32px;
+      height: 32px;
+      padding: 8px;
+      border-radius: 50%;
+      margin-left: 22px;
+      cursor: pointer;
+
+      &--facebook {
+        background-color: $fb_color;
+      }
+
+      &--twitter {
+        background-color: $twit_color;
+      }
+
+       &--google {
+        background-color: $ggl_color;
+      }
+
+       &--linkedin {
+        background-color: $lkd_color;
+      }  
+
+    }
+  }
+}
+
+.app-signup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  &__button {
+    width: 96px;
+    border: none;
+    margin-top: 8px;
+    padding: 11px 18px 10px;
+    background-color: #ea6060;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: nowrap;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__input {
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-top: 8px;
+    padding: 10px 16px 9px;
+    outline: none;
+    border:1px solid $lght_gray;
+    border-radius: 4px;
+  
+    &::placeholder {
+      font-family: inherit;
+      font-size: 16px;
+      color: $lght_gray;
+    }
+  }
+
+}
+
+.app-sidebar-nav__item-icon {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  
+  &--home {
+    background-image: url(../assets/images/home.png);
+  }
+
+  &--store {
+    background-image: url(../assets/images/basket.png);
+  }
+
+  &--blog {
+    background-image: url(../assets/images/edit_gray.png);
+  }
+
+  &--community {
+    background-image: url(../assets/images/users.png);
+  }
+
+  &--contest {
+    background-image: url(../assets/images/cup.png);
+  }
+
+  &--about {
+    background-image: url(../assets/images/info.png);
+  }
+
+  &--contact {
+    background-image: url(../assets/images/mess.png);
+  }
+
+}
+
+.app-sidebar-nav__item:hover .app-sidebar-nav__item-icon {
+  &--home {
+    background-image: url(../assets/images/home_white.png);
+  }
+
+  &--store {
+    background-image: url(../assets/images/basket_white.png);
+  }
+
+  &--blog {
+    background-image: url(../assets/images/edit.png);
+  }
+
+  &--community {
+    background-image: url(../assets/images/users_white.png);
+  }
+
+  &--contest {
+    background-image: url(../assets/images/cup_white.png);
+  }
+
+  &--about {
+    background-image: url(../assets/images/info_white.png);
+  }
+
+   &--contact {
+    background-image: url(../assets/images/message_white.png);
+  }
+}
+
+
+@media screen and (max-width: 703px) { 
+  .app-content,
+  .app-social-panel {
+    flex-grow: 1;
+  }
+
+  .app-sidebar {
+    margin-right: 0;
+    width: 100%;
+    order: 2;
+
+    &-nav {
+      display: none;
+      
+      &__item-icon {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .app-social {
+    flex-wrap: wrap;
+
+    &-panel {
+      margin: 0;
+    }
+  } 
+
+  .app-follow {
+
+    &__wrapper {
+      width: 100%;
+      @include flex_between;
+    }
+
+    &-panel {
+      width: auto;
+      margin-top: 14px;
+    }
+  }
+} 

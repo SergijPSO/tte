@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'mixins';
+
+.app-header{
+  min-width: 353px;
+  @include align_center;
+  height: $header-height;
+  margin-bottom: 14px;
+  background-color: #fff;
+}
+
+.app-burger {
+  display: none;
+  height: $header-height;
+  background-color: $active_blue;
+  padding: 22px 18px;
+}
+
+.app-nav {
+  padding: 0 24px;
+
+  &__item {
+    padding: 8px;
+    color:#475055;
+
+    & + & {
+      margin-left: 20px;
+    }
+  }
+
+  &__item:hover {
+    color:$active_blue;
+    transition: color 0.3s ease;
+  }
+}
+
+.app-search {
+  padding: 20px 22px;
+  margin-left: auto;
+
+  img {
+    padding-top:4px;
+    cursor: pointer;
+  }
+
+}
+
+.app-social-links {
+  @include align_center;
+  border-left: 1px solid $lght_gray;
+  border-right: 1px solid $lght_gray;
+  height: 100%;
+  padding: 0 10px;
+  margin-bottom: 0;
+
+  img {
+    padding-top: 4px;
+  }
+
+  &__item{
+    padding: 10px
+  }
+}
+
+.app-profile {
+  height: 100%;
+  padding: 18px 22px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $active_blue;
+    transition: background-color 0.4s ease;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  body {
+    position: relative;
+  }
+
+  .app-burger {
+    display: block;
+    height:100%;
+  }
+
+  .app-nav {
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: $header-height;
+    background-color: $active_blue;
+    z-index: 1;
+
+    &__item {
+      display: block;
+      color: white;
+    
+    &:hover {
+      color: $drk_gray;
+    }
+
+      & + & {
+        margin: 0;
+      }
+    }
+  }
+}

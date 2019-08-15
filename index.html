@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="https://ssdua.com/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
+  <script defer src="./main.js"></script>
+  <title>Smart Systems Development</title>
+</head>
+
+<body>
+  <div class="app-modal">
+    <section class="app-window">
+      <form target="_blank" class="app-window-form" name="registration" method="POST" action="#">
+        <h3 class="app-window-form__title">Ask a Question</h3>
+        <div id="app-window-form__name">
+          <input class="app-window-form__user" type="text" pattern="^([a-zA-Z0-9)$" name="name" placeholder="Your name"
+            data-validation="length required" data-validation-length="min3">
+        </div>
+        <div id="app-window-form__email">
+          <input class="app-window-form__email" type="email" name="email" placeholder="Enter your email"
+            data-validation="email required">
+        </div>
+        <div id="app-window-form__question">
+          <textarea class="app-window-form__txt" placeholder="Your question:" name="question"
+            data-validation="required"></textarea>
+        </div>
+        <button class="app-window-form__btn">SUBMIT</button>
+      </form>
+    </section>
+  </div>
+  <header class="app-header">
+
+    <div class="app-burger" onclick="myFunction()">
+      <img src="./assets/images/burger.png" alt="burger">
+    </div>
+
+    <nav class="app-nav" id="navigation">
+      <a class="app-nav__item" href="#">Home</a>
+      <a class="app-nav__item" href="#">Store</a>
+      <a class="app-nav__item" href="#">Blog</a>
+      <a class="app-nav__item" href="#">About</a>
+      <a class="app-nav__item" href="#">Contact</a>
+    </nav>
+
+    <div class="app-search">
+      <img src="./assets/images/search.png" alt="search"/>
+    </div>
+
+    <ul class="app-social-links">
+      <li>
+        <a class="app-social-links__item" href="#">
+          <img src="./assets/images/facebook.png" alt="facebook"/>
+        </a>
+      </li>
+      <li>
+        <a class="app-social-links__item" href="#">
+          <img src="./assets/images/twit.png" alt="twitter"/>
+        </a>
+      </li>
+      <li>
+        <a class="app-social-links__item" href="#">
+          <img src="./assets/images/google.png" alt="google"/>
+        </a>
+      </li>
+    </ul>
+
+    <button class="app-profile" id="login-nav">
+      <img src="./assets/images/user.png" alt="profile"/>
+    </button>
+
+  </header>
+
+  <div class="app-wrapper">
+    <aside class="app-sidebar">
+      <nav class="app-sidebar-nav">
+        <a href="#" class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--home"></div>
+          Home
+        </a>
+        <a href="#" class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--store"></div>
+          Store
+        </a>
+        <div class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--blog"></div>
+          Blog
+          <ul class="app-sublist">
+            <li class="app-sublist__item">
+              <a href="#" class="app-sublist__item-link--accent">
+                Tech
+                <img src="./assets/images/arrow.png" alt="more">
+              </a>
+              <a href="#" class="app-sublist__item-link">Software & Apps</a>
+              <a href="#" class="app-sublist__item-link">Gadgets</a>
+              <a href="#" class="app-sublist__item-link">Mobile</a>
+            </li>
+            <li class="app-sublist__item">
+              <a href="#" class="app-sublist__item-link--accent">
+                Entartainment
+                <img src="./assets/images/arrow.png" alt="more">
+              </a>
+              <a href="#" class="app-sublist__item-link">Film</a>
+              <a href="#" class="app-sublist__item-link">Gaming</a>
+              <a href="#" class="app-sublist__item-link">Music</a>
+              <a href="#" class="app-sublist__item-link">Sport</a>
+            </li>
+            <li class="app-sublist__item">
+              <a href="#" class="app-sublist__item-link--accent">
+                Business
+                <img src="./assets/images/arrow.png" alt="more">
+              </a>
+              <a href="#" class="app-sublist__item-link">Jobs</a>
+              <a href="#" class="app-sublist__item-link">Marketing</a>
+              <a href="#" class="app-sublist__item-link">Media</a>
+            </li>
+            <li class="app-sublist__item">
+              <a href="#" class="app-sublist__item-link--accent">
+                Lifestyle
+                <img src="./assets/images/arrow.png" alt="more">
+              </a>
+              <a href="#" class="app-sublist__item-link">Home</a>
+              <a href="#" class="app-sublist__item-link">Fitness & Health</a>
+              <a href="#" class="app-sublist__item-link">Travel & Leisure</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--community"></div>
+          Community
+        </a>
+        <a href="#" class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--contest"></div>
+          Contest
+        </a>
+        <a href="#" class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--about"></div>
+          About
+        </a>
+        <a href="#" class="app-sidebar-nav__item">
+          <div class="app-sidebar-nav__item-icon app-sidebar-nav__item-icon--contact"></div>
+          Contact
+        </a>
+      </nav>
+
+      <div class="app-contacts">
+        <div class="app-contacts__item">
+          <img src="./assets/images/tel.png" alt="phone"/>
+          <div>
+            <a class="app-contacts__phone-number" href="tel:9125551234">(912) 555-1234</a>
+            <a class="app-contacts__phone-number" href="tel:9125555678">(912) 555-5678</a>
+          </div>
+        </div>
+
+        <div class="app-contacts__item">
+          <img src="./assets/images/point.png" alt="location"/>
+          <p>1600 Pennsylvania Ave NW, Washington DC 20500, USA</p>
+        </div>
+
+        <div class="app-contacts__item">
+          <img src="./assets/images/email_white.png" alt="email"/>
+          <div>
+            <a class="app-contacts__email" href="mailto:hello@website.com">hello@website.com</a>
+            <a class="app-contacts__email" href="mailto:office@website.com">office@website.com</a>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="app-content">
+      <div class="app-social">
+        <ul class="app-social-panel">
+          <li class="app-social-panel__item facebook">
+            <div class="app-social-panel__item-logo">
+              <img src="./assets/images/face.png" alt="facebook">
+            </div>
+            <a href="#">Facebook</a>
+          </li>
+          <li class="app-social-panel__item twitter">
+            <div class="app-social-panel__item-logo">
+              <img src="./assets/images/twit_white.png" alt="twitter">
+            </div>
+            <a href="#">Twitter</a>
+          </li>
+          <li class="app-social-panel__item google">
+            <div class="app-social-panel__item-logo">
+              <img src="./assets/images/google_white.png" alt="google">
+            </div>
+            <a href="#">Google+</a>
+          </li>
+          <li class="app-social-panel__item rss ">
+            <div class="app-social-panel__item-logo">
+              <img src="./assets/images/rss.png" alt="rss feed">
+            </div>
+            <a href="#">Rss Feeds</a>
+          </li>
+          <li class="app-social-panel__item pinterest">
+            <div class="app-social-panel__item-logo">
+              <img src="./assets/images/pinterest.png" alt="pinterest">
+            </div>
+            <a href="#">Pinterest</a>
+          </li>
+        </ul>
+  
+        <div class="app-follow__wrapper">
+          <div class="app-follow-panel app-follow-panel--facebook">
+            <img src="./assets/images/face.png" alt="facebook" />
+            <div class="app-follow-panel__content">
+              <strong>156K</strong>
+              <div class="app-follow-panel__link">
+                Follow
+                <a href="#">
+                  <img src="./assets/images/plus.png" alt="add" />
+                </a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="app-follow-panel app-follow-panel--twitter">
+            <img src="./assets/images/twit_white.png" alt="facebook" />
+            <div class="app-follow-panel__content">
+              <strong>89K</strong>
+              <div class="app-follow-panel__link">
+                Following
+                <a href="#">
+                  <img src="./assets/images/check.png" alt="add" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-action-panel">
+        <h3 class="app-action-panel__title">Sign In</h3>
+        <p class="app-action-panel__txt">Just select your favorite social network to get started</p>
+        <div class="app-action-panel__social">
+          <div class="app-action-panel__social-icon app-action-panel__social-icon--facebook">
+            <img src="./assets/images/face.png" alt="facebook" />
+          </div>
+          <div class="app-action-panel__social-icon app-action-panel__social-icon--twitter">
+            <img src="./assets/images/twit_white.png" alt="twitter" />
+          </div>
+          <div class="app-action-panel__social-icon app-action-panel__social-icon--google">
+            <img src="./assets/images/google_white.png" alt="google" />
+          </div>
+          <div class="app-action-panel__social-icon app-action-panel__social-icon--linkedin">
+            <img src="./assets/images/linkedin.png" alt="linkedin" />
+          </div>
+        </div>
+      </div>
+      <div class="app-action-panel">
+        <h3 class="app-action-panel__title">Join the Newsletter</h3>
+        <p class="app-action-panel__txt app-action-panel__txt--newsletter">Sign up for our personalized daily newsletter</p>
+        <form class="app-signup" method="POST" action="#">
+          <input class="app-signup__input" placeholder="Enter email adress" type="text">
+          <button class="app-signup__button">SIGN UP</button>
+        </form>
+      </div>
+    </main>
+      <section class="app-slider">
+        <div id ="viewport">
+          <ul id="app-slider-slidewrapper">
+            <li class="slide">
+              <img src="./assets/images/slide-0.jpg" alt="1" class="slide-img"/>
+              </li>
+            <li class="slide">
+              <img src="./assets/images/slide-1.jpg" alt="2" class="slide-img"/>
+              </li>
+            <li class="slide">
+              <img src="./assets/images/slide-2.jpg" alt="3" class="slide-img"/>
+            </li>
+            <li class="slide">
+              <img src="./assets/images/slide-3.jpg" alt="4" class="slide-img"/>
+            </li>
+          </ul>
+          <div class="app-slider-description">
+            <h3>Featured Story</h3>
+            <p>Now that the holiday gift-giving time is over, we're</p>
+            <p>sure many of our readers unwrapped some new consoles.</p>
+            <p>Despite its long life on the market..</p>
+            <a href="#">VIEW MORE</a>
+          </div>
+          <div id="prev-next-btns">
+            <div id="prev-btn">
+              <img src="./assets/images/prev.png" alt="previous_button">
+            </div>
+            <div id="next-btn">
+              <img src="./assets/images/next.png" alt="next_button">
+            </div>
+          </div>
+          <ul id="nav-btns">
+            <li class="slide-nav-btn"></li>
+            <li class="slide-nav-btn"></li>
+            <li class="slide-nav-btn"></li>
+            <li class="slide-nav-btn"></li>
+          </ul>
+        </div>
+      </section>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+<script>
+  $.validate({
+    lang: 'en'
+  });
+</script>
+
+</body>
+
+</html>
