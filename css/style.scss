@@ -507,7 +507,13 @@ img {
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
   display: none; }
-
+#app-window-form {
+  &__name,
+  &__email,
+  &__txt {
+    color:red;
+  }
+}
 .app-window {
   display: none;
   position: absolute;
@@ -567,6 +573,16 @@ img {
     position: fixed;
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (min-width: 535px) {
+  #app-window-form {
+    &__name,
+    &__email,
+    &__txt {
+      color:red;
+      font-size: 10px;
+    }
   }
 }
 html {
