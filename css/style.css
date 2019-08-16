@@ -582,7 +582,7 @@ img {
   background: rgba(0, 0, 0, 0.6);
   display: none; }
 
-#app-window-form__name, #app-window-form__email, #app-window-form__txt {
+#app-window-form__name, #app-window-form__email, #app-window-form__question {
   color: red;
   font-size: 8px; }
 
