@@ -583,7 +583,8 @@ img {
   display: none; }
 
 #app-window-form__name, #app-window-form__email, #app-window-form__txt {
-  color: red; }
+  color: red;
+  font-size: 8px; }
 
 .app-window {
   display: none;
@@ -652,10 +653,6 @@ img {
     position: fixed;
     width: 100%;
     height: 100%; } }
-@media screen and (max-width: 536px) {
-  #app-window-form__name, #app-window-form__email, #app-window-form__question {
-    color: red;
-    font-size: 10px; } }
 html {
   width: 100%;
   background: #4b6581;
