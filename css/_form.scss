@@ -5,17 +5,18 @@
   &__email,
   &__question {
     color:red;
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 
 .app-modal {
-  position: absolute;
+  position: fixed;
+  display: none;
   width: 100%;
-  height: 100%;
+  height: 104vh;
+  margin: 0 auto;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
-  display: none;
 }
 
 .app-window {
@@ -66,19 +67,27 @@
 
     input,
     textarea {
-      max-width:258px;
+      // max-width:258px;
       font-weight: 100;
       font-size: 16px;
       margin: 13px 0;
       border: 1px solid $drk_gray;
       outline-color:#4bc7c7;
     }
+
+    &__btn {
+      width: 58px;
+      padding: 7px 7px 6px;
+      font-size: 10px;
+    }
+
   }
 }
 
 @media screen and (max-width: 530px) { 
   .app-window {
-
+    max-width: 159px;
+    
     &-form {
       padding: 6px 5px 5px 6px;
 
@@ -93,22 +102,12 @@
 
       textarea,
       input {
+        margin: 3px 0;
         font-size: 10px;
       }
     }
   }
 }
-
-// @media screen and (max-width: 536px) {
-//   #app-window-form {
-//     &__name,
-//     &__email,
-//     &__question {
-//       color:red;
-//       font-size: 10px;
-//     }
-//   }
-// }
 
 @media screen and (min-width: 320px)  {
   .app-modal {
@@ -116,4 +115,10 @@
     width: 100%;
     height: 100%;
   }
+.app-window-form__btn {
+  width: 58px;
+  padding: 9px 0 8px;
+  font-size: 11px;
+}
+
 }
