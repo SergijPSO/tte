@@ -449,7 +449,7 @@ img {
   src: url(../assets/fonts/MyriadPro-Regular.ttf);
 }
 .app-header {
-  min-width: 353px;
+  min-width: 320px;
   display: flex;
   align-items: center;
   height: 60px;

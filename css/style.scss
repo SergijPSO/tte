@@ -310,7 +310,7 @@ img {
   font-family: myrad_pro;
   src: url(../assets/fonts/MyriadPro-Regular.ttf); }
 .app-header {
-  min-width: 353px;
+  min-width: 320px;
   display: flex;
   align-items: center;
   height: 60px;
@@ -528,7 +528,6 @@ img {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    // max-width: 298px;
     z-index: 1; }
     .app-window-form__title {
       font-size: 24px;
