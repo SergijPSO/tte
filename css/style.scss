@@ -173,7 +173,7 @@ img {
     display: flex;
     align-items: center; }
     .app-follow-panel__link a {
-      margin-left: 42px;
+      margin-left: 10px;
       line-height: normal; }
   .app-follow-panel--twitter {
     background-color: #4fc6f8; }
@@ -402,6 +402,17 @@ img {
   overflow: hidden;
   user-select: none; }
 
+#viewport:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: gray;
+  width: 100%;
+  height: 98.6%;
+  max-height: 450px;
+  opacity: 0.4;
+}
+
 #app-slider-slidewrapper {
   position: relative;
   width: calc(100% * 4);
@@ -423,7 +434,8 @@ img {
   padding: 18px 12px 13px 12px;
   background-color: #fff;
   border-radius: 0 4px 4px 0;
-  top: calc(50% - 25px); }
+  top: calc(50% - 25px); 
+  z-index: 1; }
 
 #prev-btn {
   left: 2px;
@@ -461,7 +473,8 @@ img {
 .app-slider-description {
   position: absolute;
   color: #fff;
-  padding-left: 62px; }
+  padding-left: 62px; 
+  z-index: 1; }
   .app-slider-description h3 {
     font-size: 46px;
     font-weight: 300;
@@ -478,6 +491,56 @@ img {
     border-radius: 4px;
     font-weight: 500; }
 
+@media screen and (max-width: 695px) { 
+  #viewport:before {
+    height: 98.4%;
+  }
+}
+
+@media screen and (max-width: 644px) { 
+  #viewport:before {
+    height: 98.6%;
+  }
+}
+
+@media screen and (max-width: 614px) { 
+  #viewport:before {
+    height: 98.2%;
+  }
+}
+
+@media screen and (max-width: 529px) and (min-width:473px) { 
+  #viewport:before {
+    height: 97.9%;
+  }
+}
+
+@media screen and (max-width: 472px) { 
+  #viewport:before {
+    height: 97.7%;
+  }
+}
+
+@media screen and (max-width: 452px) { 
+  #viewport:before {
+    height: 97.5%;
+  }
+}
+
+@media screen and (max-width: 389px) { 
+  #viewport:before {
+    height: 97.2%;
+  }
+}
+
+
+// @media screen and (max-width: 662px) { 
+//   #viewport:before {
+//     height:
+//   }
+// }
+
+
 @media screen and (max-width: 530px) {
   .app-slider {
     margin: 0;
@@ -488,7 +551,8 @@ img {
         padding-bottom: 0;
         font-size: 20px; }
       .app-slider-description p {
-        font-size: 8px; }
+        font-size: 10px;
+        font-weight: 500; }
       .app-slider-description a {
         position: inherit;
         top: 80px;
