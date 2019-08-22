@@ -636,6 +636,7 @@ img {
   position: absolute;
   width: 100%;
   bottom: 56px;
+  z-index: 1;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -714,11 +715,6 @@ img {
     height: 97.5%;
   }
 }
-@media screen and (max-width: 389px) {
-  #viewport:before {
-    height: 97.2%;
-  }
-}
 @media screen and (max-width: 530px) {
   .app-slider {
     margin: 0;
@@ -727,23 +723,25 @@ img {
 
   .app-slider-description {
     padding-left: 42px;
+    width: 278px;
   }
 
   .app-slider-description h3 {
-    padding-bottom: 0;
+    padding-bottom: 14px;
+    font-weight: 400;
     font-size: 20px;
   }
 
   .app-slider-description p {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 500;
   }
 
   .app-slider-description a {
     position: inherit;
-    top: 80px;
-    font-size: 9px;
-    padding: 2px;
+    top: 132px;
+    font-size: 12px;
+    padding: 4px;
   }
 
   #nav-btns {
